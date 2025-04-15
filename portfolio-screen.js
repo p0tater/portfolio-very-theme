@@ -38,27 +38,27 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
     return [super.styles,
     css`
       :host {
-        display: block;
         color: var(--ddd-theme-primary);
         background-color: var(--ddd-theme-accent);
         font-family: var(--ddd-font-navigation);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
       }
-      .wrapper {
-        margin: var(--ddd-spacing-2);
-        padding: var(--ddd-spacing-4);
-      }
-      h3 span {
-        font-size: var(--portfolio-very-theme-label-font-size, var(--ddd-font-size-s));
-      }
+     .screen {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+     }
+
     `];
   }
 
   // Lit render the HTML
   render() {
     return html`
-<div class="wrapper">
-  <h3><span>${this.t.title}:</span> ${this.title}</h3>
-  <slot></slot>
+<div class="screen">
+ <slot name="title"></slot>
 </div>`;
   }
 

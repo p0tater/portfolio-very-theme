@@ -15,31 +15,42 @@
     #demo {
       margin: var(--ddd-spacing-2);
     }
-    portfolio-very-theme {
-      margin: var(--ddd-spacing-2);
-      border: var(--ddd-border-md);
-      border-radius: var(--ddd-radius-lg);
+    .navBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 75px;
+      background-color: var(--ddd-color-primary);
+      color: var(--ddd-color-on-primary);
+      display: flex;
+      align-items: center;
+      padding-left: var(--ddd-spacing-4);
+      padding-top: var(--ddd-spacing-20);
     }
-    portfolio-very-theme:hover {
-      box-shadow: var(--ddd-boxShadow-sm);
-    }
-    #example {
-      --portfolio-very-theme-font-size: var(--ddd-font-size-l);
-      background-color: var(--ddd-accent-2);
-      color: var(--ddd-primary-17);
-    }
+
+  
+    
   </style>
   <title>portfolio-very-theme</title>
 </head>
 
 <body>
-  
-    <!-- this is going to do whatever the tag's defaults are -->
+  <div class="navBar"> 
+    <a href="#screen-1"></a>
+    <a href="#screen-2"></a>
+    <a href="#screen-3"></a>
+    <a href="#screen-4"></a>
+
+    <a href="#screen-5"></a>
+    
+  </div>
     <portfolio-very-theme></portfolio-very-theme>
   
   <script type="module" src="./portfolio-very-theme.js"></script>
-
-  <!-- Take HAX, the Web and you further down the rabbit hole -->
+  <script type="module" src="./portfolio-screen.js"></script>
+  
+  
   <style>
   </style>
 </body>
