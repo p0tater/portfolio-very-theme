@@ -5,6 +5,7 @@
 import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
+import "@haxtheweb/scroll-button/scroll-button.js";
 
 /**
  * `portfolio-very-theme`
@@ -46,6 +47,14 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       h3 span {
         font-size: var(--portfolio-very-theme-label-font-size, var(--ddd-font-size-s));
       }
+      span {
+        margin-left: auto;
+        margin-top: var(--ddd-spacing-10);
+        padding-right: var(--ddd-spacing-30);
+        font-size: var(--ddd-font-size-m);
+        font-family: var(--ddd-font-primary);
+     }
+
     `];
   }
 
@@ -53,14 +62,20 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
 <div class="wrapper">
-  <portfolio-screen>
+  <portfolio-screen id="screen-0">
     <span slot="title">About Me</span> 
   </portfolio-screen>
-  <portfolio-screen>
-  <span slot="title">Research</span> 
+  <portfolio-screen id="screen-1">
+   <span slot="title">Research</span> 
   </portfolio-screen>
-  <portfolio-screen>
-  <span slot="title"></span> 
+  <portfolio-screen id="screen-2">
+    <span slot="title">Publications</span> 
+  </portfolio-screen>
+  <portfolio-screen id="screen-3">
+    <span slot="title">Professional Development</span>
+  </portfolio-screen>
+  <portfolio-screen id="screen-4">
+    <span slot="title">Contact</span>
   </portfolio-screen>
 </div>`;
   }

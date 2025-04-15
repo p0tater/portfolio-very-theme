@@ -26,7 +26,29 @@
       display: flex;
       align-items: center;
       padding-left: var(--ddd-spacing-4);
-      padding-top: var(--ddd-spacing-20);
+      padding-top: var(--ddd-spacing-30);
+    }
+    a{
+      padding: var(--ddd-spacing-10);
+      text-decoration: none !important;
+      color: var(--ddd-primary-5) !important;
+    }
+    .contact{
+      margin-left: auto;
+    }
+
+    scroll-button{
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--ddd-color-primary);
+      color: var(--ddd-color-on-primary);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
   
@@ -37,19 +59,19 @@
 
 <body>
   <div class="navBar"> 
-    <a href="#screen-1"></a>
-    <a href="#screen-2"></a>
-    <a href="#screen-3"></a>
-    <a href="#screen-4"></a>
+    <a href="#screen-0">About Me</a>
+    <a href="#screen-1">Research</a>
+    <a href="#screen-2">Publications</a>
+    <a href="#screen-3">Professional Development</a>
 
-    <a href="#screen-5"></a>
+    <a class="contact" href="#screen-4">Contact</a>
     
   </div>
     <portfolio-very-theme></portfolio-very-theme>
   
   <script type="module" src="./portfolio-very-theme.js"></script>
   <script type="module" src="./portfolio-screen.js"></script>
-  
+  <scroll-button direction="up"></scroll-button>
   
   <style>
   </style>
