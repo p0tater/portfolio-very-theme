@@ -59,6 +59,7 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
     return html`
 <div class="screen">
  <slot name="title"></slot>
+
 </div>`;
   }
 
