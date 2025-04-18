@@ -23,21 +23,22 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       .contact {
         margin-left: auto;
       }
-      portfolio-screen {
-        display: block;
-      }
-      span {
+
+      span[slot="title"] {
         font-size: var(--ddd-font-size-l);
-        padding-left: 115vh;
-        padding-top: 10vh;
         font-family: var(--ddd-font-secondary);
         font-weight: var(--ddd-font-weight-bold);
+        align-self: flex-end;
+        margin-top: var(--ddd-spacing-25);
       }
       scroll-button {
         position: fixed;
         bottom: 20px;
         right: 20px;
         z-index: 1000;
+      }
+      img{
+        max-width: 300px;
       }
     `;
   }
@@ -53,7 +54,9 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     return html`
 
       <portfolio-screen id="screen-0">
-        <span slot="title">About Me</span> 
+        <span slot="title">About Me</span>
+        <span slot="img"><img src="https://images.ctfassets.net/ni9rh5nu0d99/2p1eWsDl9umbeRKa02UEsQ/bba80b11dd34aecab19db215eaa8bb59/brandywine-01.jpg"></span>
+        <span slot="content">I am a PhD student at the University of Delaware. I am also interested in the intersection of human-computer interaction and machine learning.</span>
       </portfolio-screen>
       <portfolio-screen id="screen-1">
         <span slot="title">Research</span> 

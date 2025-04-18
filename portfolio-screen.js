@@ -50,6 +50,12 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
         flex-direction: column;
         min-height: 100vh;
      }
+
+     .stuffs {
+        display: flex;
+        margin-top: var(--ddd-spacing-30);
+        margin-left: var(--ddd-spacing-15);
+     }
    
     `];
   }
@@ -59,6 +65,10 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
     return html`
 <div class="screen">
  <slot name="title"></slot>
+    <div class="stuffs">
+        <slot name="img"></slot>
+        <slot name="content"></slot>
+     </div>
 
 </div>`;
   }

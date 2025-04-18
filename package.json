@@ -27,6 +27,7 @@
         "test:watch": "web-test-runner test/**/*.test.js --node-resolve --watch"
     },
     "dependencies": {
+        "@haxtheweb/a11y-gif-player": "^10.0.2",
         "@haxtheweb/d-d-d": "^10.0.2",
         "@haxtheweb/i18n-manager": "^10.0.2",
         "@haxtheweb/scroll-button": "^10.0.2",
