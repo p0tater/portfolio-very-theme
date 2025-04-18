@@ -6,7 +6,7 @@ import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js"; 
 import "@haxtheweb/scroll-button/scroll-button.js";
-
+import '@haxtheweb/a11y-gif-player/a11y-gif-player.js';
 
 export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
   static get tag() {
@@ -40,6 +40,26 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       img{
         max-width: 300px;
       }
+      .navBar {
+        position: fixed;
+        top: 20vh;
+        left: 0;
+        right: 0;
+        height: 75px;
+        background-color: rgba(39, 37, 37, 0.589);
+        color: var(--ddd-accent-0);
+        display: flex;
+        align-items: center;
+        margin-left: var(--ddd-spacing-12);
+        overflow: auto;
+        scrollbar-width: none;
+      }
+      a {
+        padding: var(--ddd-spacing-10);
+        text-decoration: none !important;
+        color: var(--ddd-primary-5) !important;
+        font-family: var(--ddd-font-secondary);
+      }
     `;
   }
   screenJump(hash) {
@@ -52,6 +72,15 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
 
   render() {
     return html`
+
+    <div class="navBar"> 
+      <a href="#screen-0">About Me</a>
+      <a href="#screen-1">Research</a>
+      <a href="#screen-2">Publications</a>
+      <a href="#screen-3">Professional Development</a>
+      <a class="contact" href="#screen-4">Contact</a>
+    <a11y-gif-player src="https://i.pinimg.com/originals/08/96/4c/08964cddfe354f0ee57780bda5214090.gif" __playing="true" style="width: 140px; margin-left: auto; opacity: .6;"></a11y-gif-player>
+      </div>
 
       <portfolio-screen id="screen-0">
         <span slot="title">About Me</span>
