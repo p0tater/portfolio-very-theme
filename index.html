@@ -13,42 +13,28 @@
       padding: 0;
     }
     .navBar {
-      position: fixed;
-      top: 20vh;
-      left: 0;
-      right: 0;
-      height: 75px;
-      background-color: rgba(39, 37, 37, 0.589);
-      color: var(--ddd-accent-0);
-      display: flex;
-      align-items: center;
-      margin-left: var(--ddd-spacing-12);
-    }
-    a {
-      padding: var(--ddd-spacing-10);
-      text-decoration: none !important;
-      color: var(--ddd-primary-5) !important;
-      font-family: var(--ddd-font-secondary);
-    }
-    .contact {
-      margin-left: auto;
-    }
-    portfolio-screen {
-      display: block;
-    }
-    span{
-      font-size: var(--ddd-font-size-l);
-      padding-left: 115vh;
-      padding-top: 10vh;
-      font-family: var(--ddd-font-secondary);
-      font-weight: var(--ddd-font-weight-bold);
-    }
+        position: fixed;
+        top: 20vh;
+        left: 0;
+        right: 0;
+        height: 75px;
+        background-color: rgba(39, 37, 37, 0.589);
+        color: var(--ddd-accent-0);
+        display: flex;
+        align-items: center;
+        margin-left: var(--ddd-spacing-12);
+      }
+      a {
+        padding: var(--ddd-spacing-10);
+        text-decoration: none !important;
+        color: var(--ddd-primary-5) !important;
+        font-family: var(--ddd-font-secondary);
+      }
   </style>
   <title>Portfolio</title>
 </head>
 
 <body>
-
   <div class="navBar"> 
     <a href="#screen-0">About Me</a>
     <a href="#screen-1">Research</a>
@@ -57,23 +43,21 @@
     <a class="contact" href="#screen-4">Contact</a>
   </div>
 
-  <portfolio-screen id="screen-0">
-    <span slot="title">About Me</span> 
-  </portfolio-screen>
-  <portfolio-screen id="screen-1">
-    <span slot="title">Research</span> 
-  </portfolio-screen>
-  <portfolio-screen id="screen-2">
-    <span slot="title">Publications</span> 
-  </portfolio-screen>
-  <portfolio-screen id="screen-3">
-    <span slot="title">Professional Development</span>
-  </portfolio-screen>
-  <portfolio-screen id="screen-4">
-    <div id="screen"></div>
-    <span slot="title">Contact</span>
-  </portfolio-screen>
+  <portfolio-very-theme></portfolio-very-theme>
 
+  <script type="module" src="./portfolio-very-theme.js"></script>
   <script type="module" src="./portfolio-screen.js"></script>
+  <script>
+    addEventListener("hashchange", (e) => {
+      console.log("Button pressed", e);
+      const hash = location.hash.substring(1);
+      const portfolioScreen = document.querySelector("portfolio-very-theme");
+      console.log(portfolioScreen);
+      portfolioScreen.screenJump(hash);
+
+
+    });
+  
+  </script>
 </body>
 </html>
