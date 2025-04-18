@@ -26,10 +26,13 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
 
       span[slot="title"] {
         font-size: var(--ddd-font-size-l);
-        font-family: var(--ddd-font-secondary);
+        font-family: var(--ddd-font-navigation);
         font-weight: var(--ddd-font-weight-bold);
         align-self: flex-end;
         margin-top: var(--ddd-spacing-25);
+      }
+      #screen, span[slot="content"]{
+        margin-left: var(--ddd-spacing-5);
       }
       scroll-button {
         position: fixed;
@@ -58,7 +61,11 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         padding: var(--ddd-spacing-10);
         text-decoration: none !important;
         color: var(--ddd-primary-5) !important;
-        font-family: var(--ddd-font-secondary);
+        font-family: var(--ddd-font-navigation);
+        font-weight: var(--ddd-font-weight-medium);
+      }
+      iframe{
+        justify-self: center;
       }
     `;
   }
@@ -79,13 +86,14 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       <a href="#screen-2">Publications</a>
       <a href="#screen-3">Professional Development</a>
       <a class="contact" href="#screen-4">Contact</a>
-    <a11y-gif-player src="https://i.pinimg.com/originals/08/96/4c/08964cddfe354f0ee57780bda5214090.gif" __playing="true" style="width: 140px; margin-left: auto; opacity: .6;"></a11y-gif-player>
+    <a11y-gif-player src="https://i.pinimg.com/originals/08/96/4c/08964cddfe354f0ee57780bda5214090.gif" __playing="true" style="width: 140px; opacity: .6;"></a11y-gif-player>
       </div>
 
       <portfolio-screen id="screen-0">
         <span slot="title">About Me</span>
-        <span slot="img"><img src="https://images.ctfassets.net/ni9rh5nu0d99/2p1eWsDl9umbeRKa02UEsQ/bba80b11dd34aecab19db215eaa8bb59/brandywine-01.jpg"></span>
-        <span slot="content">I am a PhD student at the University of Delaware. I am also interested in the intersection of human-computer interaction and machine learning.</span>
+        <span slot="img"><img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"></span>
+        <span slot="content">
+          <h1>Position</h1> I am also interested in the intersection of human-computer interaction and machine learning.</span>
       </portfolio-screen>
       <portfolio-screen id="screen-1">
         <span slot="title">Research</span> 
@@ -99,6 +107,9 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       <portfolio-screen id="screen-4">
         <div id="screen"></div>
         <span slot="title">Contact</span>
+        <span slot="content">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfAWPix3EeNvWTHDPrXNYV3EVAGjWObVHGCLZjO7WYSmDr8JQ/viewform?embedded=true" width="640" height="498" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </span>
       </portfolio-screen>
       <scroll-button direction="up"></scroll-button>
     `;
