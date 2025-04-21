@@ -57,6 +57,12 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
         margin-left: var(--ddd-spacing-15);
         justify-content: center;
      }
+
+     :host(:nth-of-type(even)) .core {
+      flex-flow: row-reverse;
+    }
+
+     
    
     `];
   }

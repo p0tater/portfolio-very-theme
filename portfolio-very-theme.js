@@ -8,6 +8,7 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 import "@haxtheweb/scroll-button/scroll-button.js";
 import '@haxtheweb/a11y-gif-player/a11y-gif-player.js';
 
+
 export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
   static get tag() {
     return "portfolio-very-theme";
@@ -19,6 +20,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         display: block;
         scroll-behavior: smooth;
       }
+      
 
       .contact {
         margin-left: auto;
@@ -31,8 +33,8 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         align-self: flex-end;
         margin-top: var(--ddd-spacing-25);
       }
-      #screen, span[slot="content"]{
-        margin-left: var(--ddd-spacing-5);
+      span[slot="content"]{
+        margin: var(--ddd-spacing-5) var(--ddd-spacing-15) 0 var(--ddd-spacing-5);
       }
       scroll-button {
         position: fixed;
@@ -68,6 +70,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       iframe{
         justify-self: center;
       }
+
     `;
   }
   screenJump(hash) {
@@ -87,7 +90,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       <a href="#screen-2">Publications</a>
       <a href="#screen-3">Professional Development</a>
       <a class="contact" href="#screen-4">Contact</a>
-    <a11y-gif-player src="https://i.pinimg.com/originals/08/96/4c/08964cddfe354f0ee57780bda5214090.gif" __playing="true" style="width: 150px; opacity: .6;"></a11y-gif-player>
+        <a11y-gif-player src="https://i.pinimg.com/originals/08/96/4c/08964cddfe354f0ee57780bda5214090.gif" __playing="true" style="width: 150px; opacity: .6;"></a11y-gif-player>
       </div>
 
       <portfolio-screen id="screen-0">
@@ -97,10 +100,16 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
           <h1>Position</h1> I am also interested in the intersection of human-computer interaction and machine learning.</span>
       </portfolio-screen>
       <portfolio-screen id="screen-1">
-        <span slot="title">Research</span> 
+          <span slot="title">Research</span> 
+          <span slot="content">
+          I am also interested in the intersection of human-computer interaction and machine learning.</span>
+          <span slot="img"><img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"></span>
       </portfolio-screen>
       <portfolio-screen id="screen-2">
         <span slot="title">Publications</span> 
+        <span slot="content">
+          I am also interested in the intersection of human-computer interaction and machine learning.</span>
+          <span slot="img"><img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"></span>
       </portfolio-screen>
       <portfolio-screen id="screen-3">
         <span slot="title">Professional Development</span>
