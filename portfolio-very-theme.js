@@ -56,6 +56,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         margin-left: var(--ddd-spacing-12);
         overflow: auto;
         scrollbar-width: none;
+        overflow-y: hidden;
       }
       a {
         padding: var(--ddd-spacing-10);
@@ -86,7 +87,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       <a href="#screen-2">Publications</a>
       <a href="#screen-3">Professional Development</a>
       <a class="contact" href="#screen-4">Contact</a>
-    <a11y-gif-player src="https://i.pinimg.com/originals/08/96/4c/08964cddfe354f0ee57780bda5214090.gif" __playing="true" style="width: 140px; opacity: .6;"></a11y-gif-player>
+    <a11y-gif-player src="https://i.pinimg.com/originals/08/96/4c/08964cddfe354f0ee57780bda5214090.gif" __playing="true" style="width: 150px; opacity: .6;"></a11y-gif-player>
       </div>
 
       <portfolio-screen id="screen-0">
