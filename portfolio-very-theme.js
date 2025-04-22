@@ -20,6 +20,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       :host {
         display: block;
         scroll-behavior: smooth;
+        font-family: var(--ddd-font-navigation);
       }
       
 
@@ -74,7 +75,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     `;
   }
   screenJump(hash) {
-    console.log(hash);
     //const target = this.shadowRoot.querySelector(`${hash}`);
     const target = this.shadowRoot.getElementById(`${hash}`);
     console.log(target);
@@ -102,7 +102,14 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       <portfolio-screen id="screen-1" style="background-color: var(--ddd-primary-3);" >
           <span slot="title">Research</span> 
           <span slot="content">
-          This is all the cool things I do. Please look at it</span>
+          This is all the cool things I do. Please look at it
+            <ul> 
+              <li>So much money!</li>
+              <li>So much money!</li>
+              <li>Goes up!</li>
+              <li>Blue line best, we should buy that one</li>
+            </ul>
+          </span>
           <span slot="img"><simple-img src='https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg' height='418' width='706'></simple-img></span>
       </portfolio-screen>
       <portfolio-screen id="screen-2" style="background-color: var(--ddd-primary-5);">
