@@ -21,7 +21,7 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
 
   constructor() {
     super();
-    this.title = "";
+    this.title = "Default";
 
   }
 
@@ -29,7 +29,7 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
   static get properties() {
     return {
       ...super.properties,
-      title: { type: String },
+      title: { type: String, reflect: true },
     };
   }
 
@@ -54,10 +54,18 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
      .core {
         display: flex;
         justify-content: center;
+        margin-top: var(--ddd-spacing-30);
      }
 
      :host(:nth-of-type(even)) .core {
       flex-flow: row-reverse;
+    }
+    .title{
+     align-self: flex-end;
+     font-size: var(--ddd-font-size-l);
+     font-family: var(--ddd-font-navigation);
+     font-weight: var(--ddd-font-weight-bold);   
+     margin-top: var(--ddd-spacing-27);
     }
 
      
@@ -69,7 +77,7 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
 <div class="screen">
- <slot name="title"></slot>
+ <div class="title"> ${this.title}</div>
     <div class="core">
         <slot name="img"></slot>
         <slot name="content"></slot>

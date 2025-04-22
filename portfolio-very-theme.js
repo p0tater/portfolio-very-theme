@@ -28,14 +28,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         margin-left: auto;
       }
 
-      span[slot="title"] {
-        font-size: var(--ddd-font-size-l);
-        font-family: var(--ddd-font-navigation);
-        font-weight: var(--ddd-font-weight-bold);
-        align-self: flex-end;
-        margin-top: var(--ddd-spacing-25);
-        margin-bottom: var(--ddd-spacing-30);
-      }
       span[slot="content"]{
         margin: var(--ddd-spacing-5) var(--ddd-spacing-15) 0 var(--ddd-spacing-5);
       }
@@ -75,7 +67,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     `;
   }
   screenJump(hash) {
-    //const target = this.shadowRoot.querySelector(`${hash}`);
     const target = this.shadowRoot.getElementById(`${hash}`);
     console.log(target);
     target.scrollIntoView({ behavior: "smooth" });
@@ -85,22 +76,20 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     return html`
 
     <div class="navBar"> 
-      <a href="#screen-0">About Me</a>
-      <a href="#screen-1">Research</a>
-      <a href="#screen-2">Publications</a>
-      <a href="#screen-3">Professional Development</a>
-      <a class="contact" href="#screen-4">Contact</a>
+      <a href="#screen-0" @click="${() => this.screenJump('screen-0')}">About Me</a>
+      <a href="#screen-1" @click="${() => this.screenJump('screen-1')}">Research</a>
+      <a href="#screen-2" @click="${() => this.screenJump('screen-2')}">Publications</a>
+      <a href="#screen-3" @click="${() => this.screenJump('screen-3')}">Professional Development</a>
+      <a class="contact" href="#screen-4" @click="${() => this.screenJump('screen-4')}">Contact</a>
         <a11y-gif-player src="https://i.pinimg.com/originals/08/96/4c/08964cddfe354f0ee57780bda5214090.gif" __playing="true" style="width: 150px; opacity: .6;"></a11y-gif-player>
       </div>
 
-      <portfolio-screen id="screen-0" style="background-color: var(--ddd-primary-4);">
-        <span slot="title">About Me</span>
+      <portfolio-screen id="screen-0" style="background-color: var(--ddd-primary-4);" title="About Me">
         <span slot="img"><simple-img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg" height="300" width="300"></simple-img></span>
         <span slot="content">
           <h1>Position</h1> I am also interested in the intersection of human-computer interaction and machine learning.</span>
       </portfolio-screen>
-      <portfolio-screen id="screen-1" style="background-color: var(--ddd-primary-3);" >
-          <span slot="title">Research</span> 
+      <portfolio-screen id="screen-1" style="background-color: var(--ddd-primary-3);" title="Research" >
           <span slot="content">
           This is all the cool things I do. Please look at it
             <ul> 
@@ -112,18 +101,15 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
           </span>
           <span slot="img"><simple-img src='https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg' height='418' width='706'></simple-img></span>
       </portfolio-screen>
-      <portfolio-screen id="screen-2" style="background-color: var(--ddd-primary-5);">
-        <span slot="title">Publications</span> 
+      <portfolio-screen id="screen-2" style="background-color: var(--ddd-primary-5);" title="Publications">
         <span slot="content">
           I am also interested in the intersection of human-computer interaction and machine learning.</span>
           <span slot="img"></span>
       </portfolio-screen>
-      <portfolio-screen id="screen-3" style="background-color: var(--ddd-primary-6);">
-        <span slot="title">Professional Development</span>
+      <portfolio-screen id="screen-3" style="background-color: var(--ddd-primary-6);" title="Professional Development">
+
       </portfolio-screen>
-      <portfolio-screen id="screen-4" style="background-color: var(--ddd-primary-2);">
-        <div id="screen"></div>
-        <span slot="title">Contact</span>
+      <portfolio-screen id="screen-4" style="background-color: var(--ddd-primary-2);" title="Contact">
         <span slot="content">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfAWPix3EeNvWTHDPrXNYV3EVAGjWObVHGCLZjO7WYSmDr8JQ/viewform?embedded=true" width="640" height="498" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </span>

@@ -26,16 +26,7 @@
   <script type="module">
     import '@haxtheweb/a11y-gif-player/a11y-gif-player.js';
   </script>
-  <script> //NEED TO FIX BRO
-    addEventListener("hashchange", (e) => {
-      console.log("Button pressed", e);
-      const hash = location.hash.substring(1);
-      const portfolioScreen = document.querySelector("portfolio-very-theme");
-      console.log(hash);
-      console.log(portfolioScreen);
-      portfolioScreen.screenJump(hash);
-    });
-
+  <script> 
     addEventListener("DOMContentLoaded", (e) => {
       const hash = location.hash.substring(1);
       const portfolioScreen = document.querySelector("portfolio-very-theme");
