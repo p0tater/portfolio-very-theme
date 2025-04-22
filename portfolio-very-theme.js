@@ -7,6 +7,7 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js"; 
 import "@haxtheweb/scroll-button/scroll-button.js";
 import '@haxtheweb/a11y-gif-player/a11y-gif-player.js';
+import '@haxtheweb/simple-img/simple-img.js';
 
 
 export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
@@ -42,7 +43,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         right: 20px;
         z-index: 1000;
       }
-      img{
+      span img{
         max-width: 300px;
       }
       .navBar {
@@ -93,28 +94,28 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         <a11y-gif-player src="https://i.pinimg.com/originals/08/96/4c/08964cddfe354f0ee57780bda5214090.gif" __playing="true" style="width: 150px; opacity: .6;"></a11y-gif-player>
       </div>
 
-      <portfolio-screen id="screen-0">
+      <portfolio-screen id="screen-0" style="background-color: var(--ddd-primary-4);">
         <span slot="title">About Me</span>
         <span slot="img"><img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"></span>
         <span slot="content">
           <h1>Position</h1> I am also interested in the intersection of human-computer interaction and machine learning.</span>
       </portfolio-screen>
-      <portfolio-screen id="screen-1">
+      <portfolio-screen id="screen-1" style="background-color: var(--ddd-primary-3);" >
           <span slot="title">Research</span> 
           <span slot="content">
-          I am also interested in the intersection of human-computer interaction and machine learning.</span>
-          <span slot="img"><img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"></span>
+          This is all the cool things I do. Please look at it</span>
+          <span slot="img"><simple-img src='https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg' width='500'></simple-img></span>
       </portfolio-screen>
-      <portfolio-screen id="screen-2">
+      <portfolio-screen id="screen-2" style="background-color: var(--ddd-primary-5);">
         <span slot="title">Publications</span> 
         <span slot="content">
           I am also interested in the intersection of human-computer interaction and machine learning.</span>
           <span slot="img"><img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"></span>
       </portfolio-screen>
-      <portfolio-screen id="screen-3">
+      <portfolio-screen id="screen-3" style="background-color: var(--ddd-primary-6);">
         <span slot="title">Professional Development</span>
       </portfolio-screen>
-      <portfolio-screen id="screen-4">
+      <portfolio-screen id="screen-4" style="background-color: var(--ddd-primary-2);">
         <div id="screen"></div>
         <span slot="title">Contact</span>
         <span slot="content">
