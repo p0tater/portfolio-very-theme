@@ -33,6 +33,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         font-weight: var(--ddd-font-weight-bold);
         align-self: flex-end;
         margin-top: var(--ddd-spacing-25);
+        margin-bottom: var(--ddd-spacing-30);
       }
       span[slot="content"]{
         margin: var(--ddd-spacing-5) var(--ddd-spacing-15) 0 var(--ddd-spacing-5);
@@ -43,9 +44,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         right: 20px;
         z-index: 1000;
       }
-      span img{
-        max-width: 300px;
-      }
+
       .navBar {
         position: fixed;
         top: 20vh;
@@ -96,7 +95,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
 
       <portfolio-screen id="screen-0" style="background-color: var(--ddd-primary-4);">
         <span slot="title">About Me</span>
-        <span slot="img"><img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"></span>
+        <span slot="img"><simple-img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg" height="300" width="300"></simple-img></span>
         <span slot="content">
           <h1>Position</h1> I am also interested in the intersection of human-computer interaction and machine learning.</span>
       </portfolio-screen>
@@ -104,13 +103,13 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
           <span slot="title">Research</span> 
           <span slot="content">
           This is all the cool things I do. Please look at it</span>
-          <span slot="img"><simple-img src='https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg' width='500'></simple-img></span>
+          <span slot="img"><simple-img src='https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg' height='418' width='706'></simple-img></span>
       </portfolio-screen>
       <portfolio-screen id="screen-2" style="background-color: var(--ddd-primary-5);">
         <span slot="title">Publications</span> 
         <span slot="content">
           I am also interested in the intersection of human-computer interaction and machine learning.</span>
-          <span slot="img"><img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"></span>
+          <span slot="img"></span>
       </portfolio-screen>
       <portfolio-screen id="screen-3" style="background-color: var(--ddd-primary-6);">
         <span slot="title">Professional Development</span>

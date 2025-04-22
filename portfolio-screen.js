@@ -53,8 +53,6 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
 
      .core {
         display: flex;
-        margin-top: var(--ddd-spacing-30);
-        margin-left: var(--ddd-spacing-15);
         justify-content: center;
      }
 
