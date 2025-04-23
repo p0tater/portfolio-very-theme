@@ -8,8 +8,6 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 import "@haxtheweb/scroll-button/scroll-button.js";
 import '@haxtheweb/a11y-gif-player/a11y-gif-player.js';
 import '@haxtheweb/simple-img/simple-img.js';
-import "./nav-Bar.js";
-
 export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
   static get tag() {
     return "portfolio-very-theme";
