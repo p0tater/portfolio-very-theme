@@ -46,21 +46,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         z-index: 1000;
       }
 
-      .navBar {
-        position: fixed;
-        top: 20vh;
-        left: var(--ddd-spacing-0);
-        right: var(--ddd-spacing-0);
-        height: 75px;
-        background-color: var(    --ddd-theme-default-potential70);
-        color: var(--ddd-accent-0);
-        display: flex;
-        align-items: center;
-        margin-left: var(--ddd-spacing-12);
-        overflow: auto;
-        scrollbar-width: none;
-        overflow-y: hidden;
-      }
       a {
         padding: var(--ddd-spacing-10);
         text-decoration: none !important;

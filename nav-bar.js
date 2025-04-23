@@ -50,15 +50,6 @@ export class navBar extends DDDSuper(I18NMixin(LitElement)) {
         scrollbar-width: none;
         overflow-y: hidden;
     }
-
-    a {
-        padding: var(--ddd-spacing-10);
-        text-decoration: none !important;
-        color: var(--ddd-primary-5) !important;
-        font-family: var(--ddd-font-navigation);
-        font-weight: var(--ddd-font-weight-medium);
-      }
-
    
     `];
   }
