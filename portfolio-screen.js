@@ -22,6 +22,7 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
   constructor() {
     super();
     this.title = "Default";
+    this.pageNumber = 0;
 
   }
 
@@ -30,6 +31,7 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
     return {
       ...super.properties,
       title: { type: String, reflect: true },
+      pagenumber: { type: Number, reflect: true }, 
     };
   }
 
@@ -72,6 +74,25 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
    
     `];
   }
+
+  firstUpdated(changedProperties) {
+    if(super.firstUpdated) {
+      super.firstUpdated(changedProperties);
+    }
+    this.dispatchEvent(new CustomEvent('page-added', {
+      bubbles: true,
+      composed: true,
+      detail:{
+        value: this
+      }
+    }))
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    
+  }
+
 
   // Lit render the HTML
   render() {

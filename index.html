@@ -14,26 +14,50 @@
 
 
   </style>
-  <title>Portfolio</title>
+    <script type="module" src="./portfolio-very-theme.js"></script>
+    <script type="module" src="./portfolio-screen.js"></script>
+    <script type="module">
+      import '@haxtheweb/a11y-gif-player/a11y-gif-player.js';
+    </script>
 </head>
 
 <body>
 
-  <portfolio-very-theme></portfolio-very-theme>
+  <portfolio-very-theme>
+    
+    <portfolio-screen pagenumber="0" id="screen-0" style="background-color: var(--ddd-primary-4);" title="About Me">
+      <span slot="img"><simple-img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg" height="300" width="300"></simple-img></span>
+      <span slot="content">
+        <h1>Position</h1> I am also interested in the intersection of human-computer interaction and machine learning.</span>
+    </portfolio-screen>
+    <portfolio-screen pagenumber="1" id="screen-1" style="background-color: var(--ddd-primary-3);" title="Research" >
+        <span slot="content">
+        This is all the cool things I do. Please look at it
+          <ul> 
+            <li>So much money!</li>
+            <li>So much money!</li>
+            <li>Goes up!</li>
+            <li>Blue line best, we should buy that one</li>
+          </ul>
+        </span>
+        <span slot="img"><simple-img src='https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg' height='418' width='706'></simple-img></span>
+    </portfolio-screen>
+    <portfolio-screen pagenumber="2" id="screen-2" style="background-color: var(--ddd-primary-5);" title="Publications">
+      <span slot="content">
+        I am also interested in the intersection of human-computer interaction and machine learning.</span>
+        <span slot="img"></span>
+    </portfolio-screen>
+    <portfolio-screen pagenumber="3" id="screen-3" style="background-color: var(--ddd-primary-6);" title="Professional Development">
 
-  <script type="module" src="./portfolio-very-theme.js"></script>
-  <script type="module" src="./portfolio-screen.js"></script>
-  <script type="module">
-    import '@haxtheweb/a11y-gif-player/a11y-gif-player.js';
-  </script>
-  <script> 
-    addEventListener("DOMContentLoaded", (e) => {
-      const hash = location.hash.substring(1);
-      const portfolioScreen = document.querySelector("portfolio-very-theme");
-      console.log(portfolioScreen);
-      portfolioScreen.screenJump(hash);
-    });
-  
-  </script>
+    </portfolio-screen>
+    <portfolio-screen pagenumber="4" id="screen-4" style="background-color: var(--ddd-primary-2);" title="Contact">
+      <span slot="content">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfAWPix3EeNvWTHDPrXNYV3EVAGjWObVHGCLZjO7WYSmDr8JQ/viewform?embedded=true" width="640" height="498" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </span>
+    </portfolio-screen>
+
+  </portfolio-very-theme>
+
+
 </body>
 </html>

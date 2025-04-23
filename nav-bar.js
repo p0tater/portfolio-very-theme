@@ -1,0 +1,96 @@
+/**
+ * Copyright 2025 p0tater
+ * @license Apache-2.0, see LICENSE for full text.
+ */
+import { LitElement, html, css } from "lit";
+import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
+import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
+//import "@haxtheweb/scroll-button/scroll-button.js";
+
+/**
+ * `portfolio-screen`
+ * 
+ * @demo index.html
+ * @element portfolio-screen
+ */
+export class navBar extends DDDSuper(I18NMixin(LitElement)) {
+
+  static get tag() {
+    return "nav-bar";
+  }
+
+  constructor() {
+    super();
+    this.title = "Default";
+
+  }
+
+  // Lit reactive properties
+  static get properties() {
+    return {
+      ...super.properties,
+      title: { type: String, reflect: true },
+    };
+  }
+
+  // Lit scoped styles
+  static get styles() {
+    return [super.styles,
+    css`
+    :host {
+        display: block;
+      }
+    .navBar {
+        position: fixed;
+        top: 20vh;
+        left: var(--ddd-spacing-0);
+        right: var(--ddd-spacing-0);
+        height: 75px;
+        background-color: var(    --ddd-theme-default-potential70);
+        color: var(--ddd-accent-0);
+        display: flex;
+        align-items: center;
+        margin-left: var(--ddd-spacing-12);
+        overflow: auto;
+        scrollbar-width: none;
+        overflow-y: hidden;
+    }
+
+    a {
+        padding: var(--ddd-spacing-10);
+        text-decoration: none !important;
+        color: var(--ddd-primary-5) !important;
+        font-family: var(--ddd-font-navigation);
+        font-weight: var(--ddd-font-weight-medium);
+      }
+
+   
+    `];
+  }
+
+  /*
+
+   <a href="#screen-0" @click="${() => this.screenJump('screen-0')}">About Me</a>
+    <a href="#screen-1" @click="${() => this.screenJump('screen-1')}">Research</a>
+    <a href="#screen-2" @click="${() => this.screenJump('screen-2')}">Publications</a>
+    <a href="#screen-3" @click="${() => this.screenJump('screen-3')}">Professional Development</a>
+    <a class="contact" href="#screen-4" @click="${() => this.screenJump('screen-4')}">Contact</a>
+
+
+  */
+
+  // Lit render the HTML
+  render() {
+    return html`
+    <header class="navBar">
+    <slot></slot>
+    </header>
+`;
+  }
+
+  /**
+   * haxProperties integration via file reference
+   */
+}
+
+globalThis.customElements.define(navBar.tag, navBar);
