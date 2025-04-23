@@ -29,22 +29,22 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       }
 
       span[slot="content"]{
-        margin: var(--ddd-spacing-5) var(--ddd-spacing-15) 0 var(--ddd-spacing-5);
+        margin: var(--ddd-spacing-5) var(--ddd-spacing-5) 0 var(--ddd-spacing-5);
       }
       scroll-button {
         position: fixed;
-        bottom: 20px;
-        right: 20px;
+        bottom: var(--ddd-spacing-5);
+        right: var(--ddd-spacing-5);
         z-index: 1000;
       }
 
       .navBar {
         position: fixed;
         top: 20vh;
-        left: 0;
-        right: 0;
+        left: var(--ddd-spacing-0);
+        right: var(--ddd-spacing-0);
         height: 75px;
-        background-color: rgba(39, 37, 37, 0.589);
+        background-color: var(    --ddd-theme-default-potential70);
         color: var(--ddd-accent-0);
         display: flex;
         align-items: center;
@@ -114,6 +114,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfAWPix3EeNvWTHDPrXNYV3EVAGjWObVHGCLZjO7WYSmDr8JQ/viewform?embedded=true" width="640" height="498" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </span>
       </portfolio-screen>
+
       <scroll-button direction="up"></scroll-button>
     `;
   }
