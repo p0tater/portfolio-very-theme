@@ -21,7 +21,6 @@ export class navBar extends DDDSuper(I18NMixin(LitElement)) {
 
   constructor() {
     super();
-    this.title = "Default";
 
   }
 
@@ -29,7 +28,6 @@ export class navBar extends DDDSuper(I18NMixin(LitElement)) {
   static get properties() {
     return {
       ...super.properties,
-      title: { type: String, reflect: true },
     };
   }
 
@@ -38,15 +36,12 @@ export class navBar extends DDDSuper(I18NMixin(LitElement)) {
     return [super.styles,
     css`
     :host {
-        display: block;
-      }
-    .navBar {
         position: fixed;
         top: 20vh;
         left: var(--ddd-spacing-0);
         right: var(--ddd-spacing-0);
         height: 75px;
-        background-color: var(    --ddd-theme-default-potential70);
+        background-color: var(--ddd-theme-default-potential70);
         color: var(--ddd-accent-0);
         display: flex;
         align-items: center;
