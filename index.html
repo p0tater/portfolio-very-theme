@@ -12,6 +12,21 @@
       padding: 0;
     }
 
+    span h1{
+      margin: var(--ddd-spacing-0) var(--ddd-spacing-0) var(--ddd-spacing-8) var(--ddd-spacing-0); 
+    }
+
+    span[slot="content"] {
+      margin: var(--ddd-spacing-4) var(--ddd-spacing-16) var(--ddd-spacing-0) var(--ddd-spacing-16);
+    }
+
+    portfolio-screen[title="Contact"] span[slot="content"] {
+      padding: var(--ddd-spacing-4) var(--ddd-spacing-30) var(--ddd-spacing-2) var(--ddd-spacing-30);
+      background-color: var(--ddd-primary-5);
+      border-radius: var(--ddd-radius-lg);
+    }
+
+
 
   </style>
 
@@ -56,9 +71,11 @@
   <script type="module" src="./portfolio-very-theme.js"></script>
   <script type="module" src="./portfolio-screen.js"></script>
   <script type="module" src="./nav-bar.js"></script>
-  
   <script type="module">
-    import '@haxtheweb/a11y-gif-player/a11y-gif-player.js';
+    addEventListener("DOMContentLoaded", () => {
+      const currScreen = window.location.href.split("#")[1] || "screen-0";
+      document.getElementById(currScreen).scrollIntoView({ behavior: "smooth" });
+    });
   </script>
 
 </body>

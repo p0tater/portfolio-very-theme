@@ -26,17 +26,13 @@ export class navBar extends DDDSuper(I18NMixin(LitElement)) {
     :host {
         position: fixed;
         top: 20vh;
-        left: var(--ddd-spacing-0);
-        right: var(--ddd-spacing-0);
+        width: 100vw;
         height: 75px;
         background-color: var(--ddd-theme-default-potential70);
         color: var(--ddd-accent-0);
         display: flex;
         align-items: center;
         margin-left: var(--ddd-spacing-12);
-        overflow: auto;
-        scrollbar-width: none;
-        overflow-y: hidden;
     }
    
     `];
@@ -62,9 +58,7 @@ export class navBar extends DDDSuper(I18NMixin(LitElement)) {
 `;
   }
 
-  /**
-   * haxProperties integration via file reference
-   */
+
 }
 
 globalThis.customElements.define(navBar.tag, navBar);

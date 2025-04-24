@@ -16,12 +16,14 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
   constructor() {
     super();
     this.pages = [];
+    this.title = "";
   }
   
   static get properties() {
     return {
       ...super.properties,
       pages: { type: Array },
+      title: { type: String, reflect: true },
     };
   }
 
@@ -34,7 +36,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       }
       
 
-      .contact {
+      a[title="Contact"] {
         margin-left: auto;
       }
 
@@ -52,9 +54,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         color: var(--ddd-primary-5) !important;
         font-family: var(--ddd-font-navigation);
         font-weight: var(--ddd-font-weight-medium);
-      }
-      iframe{
-        justify-self: center;
       }
 
     `;
@@ -74,7 +73,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     return html`
 
     <nav-bar>
-      ${this.pages.map((page) => html `<a href="#screen-${page.number}">${page.title}</a> `)}
+      ${this.pages.map((page) => html `<a href="#screen-${page.number}" title="${page.title}">${page.title}</a> `)}
     </nav-bar>
     <div class="wrapper" @page-added="${this.addPage}">
       <slot></slot>

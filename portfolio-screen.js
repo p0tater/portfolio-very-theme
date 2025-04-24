@@ -69,7 +69,6 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
      font-weight: var(--ddd-font-weight-bold);   
      margin-top: var(--ddd-spacing-27);
     }
-
      
    
     `];
