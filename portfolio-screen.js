@@ -78,13 +78,6 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
     if(super.firstUpdated) {
       super.firstUpdated(changedProperties);
     }
-    this.dispatchEvent(new CustomEvent('page-added', {
-      bubbles: true,
-      composed: true,
-      detail:{
-        value: this
-      }
-    }))
   }
 
   connectedCallback() {

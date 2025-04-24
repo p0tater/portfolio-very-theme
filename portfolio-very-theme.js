@@ -17,8 +17,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     super();
     this.pages = [];
     this.title = "";
-
-    this.addEventListener('page-added', this.addPage());
   }
   
   static get properties() {
@@ -35,12 +33,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         display: block;
         scroll-behavior: smooth;
         font-family: var(--ddd-font-navigation);
-      }
-      
-
-      a[title="Contact"] {
-        margin-left: auto;
-
       }
 
       nav-bar {
@@ -65,14 +57,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       }
 
     `;
-  }
-  addPage(e){
-    // this.pages = [...this.pages, {
-    //   number: e.detail.value.pagenumber,
-    //   title: e.detail.value.title,
-    // }];
-    // let testout = this.shadowRoot.querySelector('slot');
-    // console.log(testout);
   }
   firstUpdated(changedProperties) {
     this.querySelectorAll('portfolio-screen').forEach((screen, index) => {
