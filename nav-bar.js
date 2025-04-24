@@ -5,13 +5,12 @@
 import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
-//import "@haxtheweb/scroll-button/scroll-button.js";
 
 /**
- * `portfolio-screen`
+ * `nav-bar`
  * 
  * @demo index.html
- * @element portfolio-screen
+ * @element nav-bar
  */
 export class navBar extends DDDSuper(I18NMixin(LitElement)) {
 
@@ -19,17 +18,6 @@ export class navBar extends DDDSuper(I18NMixin(LitElement)) {
     return "nav-bar";
   }
 
-  constructor() {
-    super();
-
-  }
-
-  // Lit reactive properties
-  static get properties() {
-    return {
-      ...super.properties,
-    };
-  }
 
   // Lit scoped styles
   static get styles() {
