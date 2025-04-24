@@ -18,7 +18,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     this.pages = [];
     this.title = "";
 
-    this.addEventListener('page-added', this.addPage);
+    this.addEventListener('page-added', this.addPage());
   }
   
   static get properties() {
@@ -67,13 +67,22 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     `;
   }
   addPage(e){
-    this.pages = [...this.pages, {
-      number: e.detail.value.pagenumber,
-      title: e.detail.value.title,
-    }];
-    console.log(e.detail.value.pagenumber);
+    // this.pages = [...this.pages, {
+    //   number: e.detail.value.pagenumber,
+    //   title: e.detail.value.title,
+    // }];
+    // let testout = this.shadowRoot.querySelector('slot');
+    // console.log(testout);
   }
-
+  firstUpdated(changedProperties) {
+    this.querySelectorAll('portfolio-screen').forEach((screen, index) => {
+      this.pages = [...this.pages, {
+        number: index,
+        title: screen.title,
+      }];
+    })
+    console.log(this.pages);
+  }
   // <a11y-gif-player src="https://i.pinimg.com/originals/08/96/4c/08964cddfe354f0ee57780bda5214090.gif" __playing="true" style="width: 150px; opacity: .6;"></a11y-gif-player>
 
   render() {

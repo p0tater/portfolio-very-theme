@@ -22,7 +22,7 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
   constructor() {
     super();
     this.title = "Default";
-    this.pageNumber = 0;
+    this.pagenumber = 0;
 
   }
 
@@ -31,7 +31,7 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
     return {
       ...super.properties,
       title: { type: String, reflect: true },
-      pagenumber: { type: Number, reflect: true }, 
+      pagenumber: { type: Number, reflect: true, attribute: 'pagenumber' }, 
     };
   }
 
