@@ -53,7 +53,9 @@ export class navBar extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
     <header class="navBar">
-    <slot></slot>
+        <slot>
+
+        </slot>
     </header>
 `;
   }
