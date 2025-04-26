@@ -12,12 +12,15 @@
       padding: 0;
     }
 
-    span h1{
+    span h2{
       margin: var(--ddd-spacing-0) var(--ddd-spacing-0) var(--ddd-spacing-8) var(--ddd-spacing-0); 
+      font-size: var(--ddd-font-size-xl);
+      font-weight: var(--ddd-font-weight-medium);
     }
 
     span[slot="content"] {
       margin: var(--ddd-spacing-4) var(--ddd-spacing-16) var(--ddd-spacing-0) var(--ddd-spacing-16);
+      font-weight: var(--ddd-font-weight-light);
     }
 
     portfolio-screen[title="Contact"] span[slot="content"] {
@@ -25,6 +28,14 @@
       background-color: var(--ddd-primary-5);
       border-radius: var(--ddd-radius-lg);
     }
+
+    #title{
+      position: absolute;
+      font-size: var(--ddd-font-size-4xl);
+      font-weight: var(--ddd-font-weight-black);
+      margin-left: var(--ddd-spacing-20);
+    }
+    
 
 
 
@@ -35,10 +46,12 @@
 <body>
 
   <portfolio-very-theme>
+    <h1 id="title">Portfolio</h1>
     <portfolio-screen pagenumber="0" id="screen-0" style="background-color: var(--ddd-primary-4);" title="About Me">
       <span slot="img"><simple-img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg" height="300" width="300"></simple-img></span>
       <span slot="content">
-        <h1>Position</h1> I am also interested in the intersection of human-computer interaction and machine learning.</span>
+        <h2>Cybersecurity Specialist</h2> I am also interested in the intersection of human-computer interaction and machine learning.
+        I am also interested in the intersection of human-computer interaction and machine learning.I am also interested in the intersection of human-computer interaction and machine learning.</span>
     </portfolio-screen>
     <portfolio-screen pagenumber="1" id="screen-1" style="background-color: var(--ddd-primary-3);" title="Research" >
         <span slot="content">
@@ -50,7 +63,7 @@
             <li>Blue line best, we should buy that one</li>
           </ul>
         </span>
-        <span slot="img"><simple-img src='https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg' height='418' width='706'></simple-img></span>
+        <span slot="img"><simple-img src='https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg' height='354' width='600'></simple-img></span>
     </portfolio-screen>
     <portfolio-screen pagenumber="2" id="screen-2" style="background-color: var(--ddd-primary-5);" title="Publications">
       <span slot="content">
