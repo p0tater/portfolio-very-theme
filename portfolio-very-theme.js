@@ -39,7 +39,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         position: fixed;
         bottom: var(--ddd-spacing-5);
         right: var(--ddd-spacing-5);
-        z-index: 1000;
+        z-index: 10;
       }
 
       a {

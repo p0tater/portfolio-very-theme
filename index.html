@@ -26,8 +26,6 @@
 
 
 
-
-
     span[slot="content"] {
       margin: var(--ddd-spacing-4) var(--ddd-spacing-16) var(--ddd-spacing-0) var(--ddd-spacing-16);
       font-weight: var(--ddd-font-weight-light);
@@ -56,6 +54,7 @@
     hax-logo{
       position: absolute;
     }
+
 
 
 
@@ -92,9 +91,31 @@
           <simple-img src='https://loodibee.com/wp-content/uploads/Penn_State_Nittany_Lions_logo.png' height='300' width='300'></simple-img>
         </span>
     </portfolio-screen>
-    <portfolio-screen pagenumber="2" id="screen-2" style="background-color: var(--ddd-primary-5);" title="Accomplishments">
+    <portfolio-screen pagenumber="2" id="screen-2" style="background-color: var(--ddd-primary-1);" title="Skills and Interests">
+        <span slot="content">
+          <h2>Skills</h2>
+          <ul>
+            <li>Proficient in HTML, CSS, JavaScript, SQL, Java</li>
+            <li>Experience with Wireshark, Snort, Autopsy, Kali Linux, Cisco Packet Tracer</li>
+            <li>Strong understanding of cybersecurity principles and practices</li>
+            <li>Excellent problem-solving and analytical skills</li>
+            <li>Strong communication and teamwork abilities</li>
+          </ul>
+          <h2>Most Recent Project</h2>
+          <github-preview repo="portfolio-very-theme" org="p0tater"></github-preview>
+        </span>
+        <span slot="img"></span>
       <span slot="content">
-        I am also interested in the intersection of human-computer interaction and machine learning.</span>
+        <h2>Interests</h2>
+        <ul>
+          <li>Web Development</li>
+          <li>Penetration Testing</li>
+          <li>Red/Blue/Purple Team Techniques</li>
+          <li>Network Security</li>
+          <li>Encryption</li>
+          <li>Ethical Hacking</li>
+        </ul>
+      </span>
         <span slot="img"></span>
     </portfolio-screen>
     <portfolio-screen pagenumber="3" id="screen-3" style="background-color: var(--ddd-primary-6);" title="Work Experience">
@@ -136,6 +157,7 @@
       });
     });
     import '@haxtheweb/hax-logo/hax-logo.js';
+    import '@haxtheweb/github-preview/github-preview.js';
   </script>
 
 </body>
