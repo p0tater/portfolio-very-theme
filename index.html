@@ -12,15 +12,33 @@
       padding: 0;
     }
 
+    span[slot="img"] {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
     span h2{
       margin: var(--ddd-spacing-0) var(--ddd-spacing-0) var(--ddd-spacing-8) var(--ddd-spacing-0); 
-      font-size: var(--ddd-font-size-xl);
+      font-size: var(--ddd-font-size-l);
       font-weight: var(--ddd-font-weight-medium);
     }
+
+
+
+
 
     span[slot="content"] {
       margin: var(--ddd-spacing-4) var(--ddd-spacing-16) var(--ddd-spacing-0) var(--ddd-spacing-16);
       font-weight: var(--ddd-font-weight-light);
+    }
+
+    portfolio-screen[title="About Me"] span[slot="img"] {
+      margin-left: var(--ddd-spacing-20);
+      margin-top: var(--ddd-spacing-15);
+    }
+    portfolio-screen[title="About Me"] span[slot="content"] {
+      margin-top: var(--ddd-spacing-20);
     }
 
     portfolio-screen[title="Contact"] span[slot="content"] {
@@ -35,7 +53,9 @@
       font-weight: var(--ddd-font-weight-black);
       margin-left: var(--ddd-spacing-20);
     }
-    
+    hax-logo{
+      position: absolute;
+    }
 
 
 
@@ -46,32 +66,58 @@
 <body>
 
   <portfolio-very-theme>
-    <h1 id="title">Portfolio</h1>
+  <h1 id="title">Portfolio</h1>
     <portfolio-screen pagenumber="0" id="screen-0" style="background-color: var(--ddd-primary-4);" title="About Me">
       <span slot="img"><simple-img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg" height="300" width="300"></simple-img></span>
       <span slot="content">
-        <h2>Cybersecurity Specialist</h2> I am also interested in the intersection of human-computer interaction and machine learning.
-        I am also interested in the intersection of human-computer interaction and machine learning.I am also interested in the intersection of human-computer interaction and machine learning.</span>
+        <h2>Cybersecurity Specialist</h2> As a dedicated and driven second-year Cybersecurity student at Penn State University, 
+        I am looking to apply my academic knowledge and technical skills to a challenging internship position. With a strong foundation in simulated cyber ranges, 
+        network content forensics and data integrity, I am confident in my ability to contribute to a dynamic cybersecurity team. Throughout my individual and 
+        collaborative coursework, I have procured proficiency in software and tools such as Wireshark, Snort, Autopsy, Kali Linux, Cisco Packet Tracer, as well as languages 
+        like SQL, Java, HTML, CSS, and JS. I am particularly interested in gaining practical experience in penetration testing, Red/Blue/Purple team techniques and the 
+        overall duties of a cybersecurity professional.</span>
     </portfolio-screen>
-    <portfolio-screen pagenumber="1" id="screen-1" style="background-color: var(--ddd-primary-3);" title="Research" >
+    <portfolio-screen pagenumber="1" id="screen-1" style="background-color: var(--ddd-primary-3);" title="Education" >
         <span slot="content">
-        This is all the cool things I do. Please look at it
-          <ul> 
-            <li>So much money!</li>
-            <li>So much money!</li>
-            <li>Goes up!</li>
-            <li>Blue line best, we should buy that one</li>
-          </ul>
+          <h2>Northwest High School</h2>
+            <p>Graduated with Honors June 2022</p>
+            <p>Weighted GPA: 3.75</p>
+          <h1>Penn State University</h1>
+            <p>College of Information Sciences and Technology</p>
+            <p>Cumulative GPA: 3.70</p>
+            <p>Expected Graduation: Spring 2027</p>
         </span>
-        <span slot="img"><simple-img src='https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg' height='354' width='600'></simple-img></span>
+        <span slot="img">
+          <simple-img src='https://image.maxpreps.io/school-mascot/c/0/0/c00546b9-c811-42de-ae88-535d396d6858.gif' height='225' width='225'></simple-img>
+          <simple-img src='https://loodibee.com/wp-content/uploads/Penn_State_Nittany_Lions_logo.png' height='300' width='300'></simple-img>
+        </span>
     </portfolio-screen>
-    <portfolio-screen pagenumber="2" id="screen-2" style="background-color: var(--ddd-primary-5);" title="Publications">
+    <portfolio-screen pagenumber="2" id="screen-2" style="background-color: var(--ddd-primary-5);" title="Accomplishments">
       <span slot="content">
         I am also interested in the intersection of human-computer interaction and machine learning.</span>
         <span slot="img"></span>
     </portfolio-screen>
-    <portfolio-screen pagenumber="3" id="screen-3" style="background-color: var(--ddd-primary-6);" title="Professional Development">
-
+    <portfolio-screen pagenumber="3" id="screen-3" style="background-color: var(--ddd-primary-6);" title="Work Experience">
+      <span slot="content">
+        <h2>Inferno Pizzeria Napoletana</h2>
+        <ul>
+          <li>Answered and satisfied phone-in/to-go orders.</li>
+          <li>Cleared tables, provided orders whilst hosting customers.</li>
+          <li>Worked 6 hours a week during the school year and 12 hours during the summer.</li>
+          <li> Assisted in opening and closing, completing tasks provided by lead chef.</li>
+        </ul>
+        <h1>Trader Joes</h1>
+        <ul>
+          <li>Worked 22-hour weeks on top of my 6 hour a week job at Inferno during high school year and summer.</li>
+          <li>Created close relationships with managers and co-workers, plan on going working during the summer this year.</li>
+          <li>Worked collaboratively with co-workers, breaking down truck loads and stocking shelves.</li>
+          <li>Developed and honed workplace social skills, especially during my work on register.</li>
+        </ul>
+      </span>
+      <span slot="img">
+        <simple-img src='https://images.squarespace-cdn.com/content/556672f9e4b07ef3724287b2/1432777829307-AEB6LS2BOZ7NNJ1QRQ3R/inferno-pizzeria.png?content-type=image%2Fpng' height='118' width='400'></simple-img>
+        <simple-img src='https://1000logos.net/wp-content/uploads/2022/03/Trader-Joes-Logo.png' height='240' width='426'></simple-img>
+      </span>
     </portfolio-screen>
     <portfolio-screen pagenumber="4" id="screen-4" style="background-color: var(--ddd-primary-2);" title="Contact">
       <span slot="content">
@@ -89,6 +135,7 @@
       document.getElementById(currScreen).scrollIntoView({ behavior: "smooth"
       });
     });
+    import '@haxtheweb/hax-logo/hax-logo.js';
   </script>
 
 </body>

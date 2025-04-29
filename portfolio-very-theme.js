@@ -35,12 +35,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         font-family: var(--ddd-font-navigation);
       }
 
-      nav-bar {
-      display: flex;
-      align-items: center;
-    }
-
-
       scroll-button {
         position: fixed;
         bottom: var(--ddd-spacing-5);
@@ -49,11 +43,13 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       }
 
       a {
-        padding: var(--ddd-spacing-10);
+        margin-right: var(--ddd-spacing-10);
+        margin-left: var(--ddd-spacing-10);
         text-decoration: none !important;
         color: var(--ddd-primary-5) !important;
         font-family: var(--ddd-font-navigation);
         font-weight: var(--ddd-font-weight-medium);
+        align-content: center;
       }
 
     `;

@@ -34,6 +34,21 @@ export class navBar extends DDDSuper(I18NMixin(LitElement)) {
         align-items: center;
         margin-left: var(--ddd-spacing-12);
     }
+
+    header{
+      display: flex;
+      width: 100%;
+    }
+
+     a, hax-logo {
+      margin-left: auto;
+      margin-right: var(--ddd-spacing-10);
+      height: 30px;
+      text-decoration: none !important;
+      color: var(--ddd-primary-5) !important;
+      margin-top: var(--ddd-spacing-1);
+
+    }
    
     `];
   }
@@ -56,6 +71,7 @@ export class navBar extends DDDSuper(I18NMixin(LitElement)) {
         <slot>
 
         </slot>
+        <a href="https://hax.psu.edu"><hax-logo size="mini"></hax-logo></a>
     </header>
 `;
   }
