@@ -25,7 +25,6 @@
     }
 
 
-
     span[slot="content"] {
       margin: var(--ddd-spacing-4) var(--ddd-spacing-16) var(--ddd-spacing-0) var(--ddd-spacing-16);
       font-weight: var(--ddd-font-weight-light);
@@ -54,6 +53,53 @@
     hax-logo{
       position: absolute;
     }
+    
+
+    @media screen and (max-width: 1100px){
+      #title{
+        font-size: var(--ddd-font-size-xxl);
+      }
+    portfolio-very-theme{
+      width: 100%;
+      display: flex;
+    }
+    portfolio-screen[title="About Me"] span[slot="img"] {
+     align-self: center;
+    }
+    }
+
+    @media screen and (max-width: 700px){
+      portfolio-screen[title="About Me"] span[slot="content"] {
+      font-size: var(--ddd-font-size-m);
+    }
+
+    }
+
+    
+    @media screen and (max-width: 450px){
+      portfolio-screen[title="About Me"] span[slot="content"] {
+        font-size: var(--ddd-font-size-l);
+      }
+      portfolio-screen[title="Education"] span[slot="content"] {
+        text-align: center;
+      }
+      iframe{
+        height: 650px;
+      }
+      span[slot="content"] {
+        padding-top: var(--ddd-spacing-30);
+        font-size: var(--ddd-font-size-xl);
+      }
+      ul li{
+        font-size: var(--ddd-font-size-m) !important;
+      }
+      #title{
+        font-size: var(--ddd-font-size-4xl);
+      }
+
+      
+    }
+
 
 
 
@@ -67,7 +113,7 @@
   <portfolio-very-theme>
   <h1 id="title">Portfolio</h1>
     <portfolio-screen pagenumber="0" id="screen-0" style="background-color: var(--ddd-primary-4);" title="About Me">
-      <span slot="img"><simple-img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg" height="300" width="300"></simple-img></span>
+      <span slot="img"><simple-img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg" height="300" width="300" alt="Profile picture of student"></simple-img></span>
       <span slot="content">
         <h2>Cybersecurity Specialist</h2> As a dedicated and driven second-year Cybersecurity student at Penn State University, 
         I am looking to apply my academic knowledge and technical skills to a challenging internship position. With a strong foundation in simulated cyber ranges, 
@@ -81,14 +127,14 @@
           <h2>Northwest High School</h2>
             <p>Graduated with Honors June 2022</p>
             <p>Weighted GPA: 3.75</p>
-          <h1>Penn State University</h1>
+          <h2>Penn State University</h2>
             <p>College of Information Sciences and Technology</p>
             <p>Cumulative GPA: 3.70</p>
             <p>Expected Graduation: Spring 2027</p>
         </span>
         <span slot="img">
-          <simple-img src='https://image.maxpreps.io/school-mascot/c/0/0/c00546b9-c811-42de-ae88-535d396d6858.gif' height='225' width='225'></simple-img>
-          <simple-img src='https://loodibee.com/wp-content/uploads/Penn_State_Nittany_Lions_logo.png' height='300' width='300'></simple-img>
+          <simple-img src='https://image.maxpreps.io/school-mascot/c/0/0/c00546b9-c811-42de-ae88-535d396d6858.gif' height='225' width='225' alt="Northwest Highschool Jaguar Logo"></simple-img>
+          <simple-img src='https://loodibee.com/wp-content/uploads/Penn_State_Nittany_Lions_logo.png' height='300' width='300' alt="Penn State University Nittany Lion"></simple-img>
         </span>
     </portfolio-screen>
     <portfolio-screen pagenumber="2" id="screen-2" style="background-color: var(--ddd-primary-1);" title="Skills and Interests">
@@ -104,7 +150,6 @@
           <h2>Most Recent Project</h2>
           <github-preview repo="portfolio-very-theme" org="p0tater"></github-preview>
         </span>
-        <span slot="img"></span>
       <span slot="content">
         <h2>Interests</h2>
         <ul>
@@ -116,7 +161,6 @@
           <li>Ethical Hacking</li>
         </ul>
       </span>
-        <span slot="img"></span>
     </portfolio-screen>
     <portfolio-screen pagenumber="3" id="screen-3" style="background-color: var(--ddd-primary-6);" title="Work Experience">
       <span slot="content">
@@ -136,8 +180,8 @@
         </ul>
       </span>
       <span slot="img">
-        <simple-img src='https://images.squarespace-cdn.com/content/556672f9e4b07ef3724287b2/1432777829307-AEB6LS2BOZ7NNJ1QRQ3R/inferno-pizzeria.png?content-type=image%2Fpng' height='118' width='400'></simple-img>
-        <simple-img src='https://1000logos.net/wp-content/uploads/2022/03/Trader-Joes-Logo.png' height='240' width='426'></simple-img>
+        <simple-img src='https://images.squarespace-cdn.com/content/556672f9e4b07ef3724287b2/1432777829307-AEB6LS2BOZ7NNJ1QRQ3R/inferno-pizzeria.png?content-type=image%2Fpng' alt="Logo of Inferno Pizzeria"height='118' width='400'></simple-img>
+        <simple-img src='https://1000logos.net/wp-content/uploads/2022/03/Trader-Joes-Logo.png' alt="Logo of Trader Joes" height='240' width='426'></simple-img>
       </span>
     </portfolio-screen>
     <portfolio-screen pagenumber="4" id="screen-4" style="background-color: var(--ddd-primary-2);" title="Contact">

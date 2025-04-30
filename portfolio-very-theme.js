@@ -52,8 +52,25 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         align-content: center;
       }
 
+    @media screen and (max-width: 1100px){
+      a{
+        font-size: var(--ddd-font-size-4xs);
+      }
+
+      nav-bar{
+        width:100%;
+      }
+    }
+
+    @media screen and (max-width: 450px){
+      nav-bar{
+        top: 25vh;
+        height: 10vh;
+      }
+    }
     `;
   }
+
   firstUpdated(changedProperties) {
     this.querySelectorAll('portfolio-screen').forEach((screen, index) => {
       this.pages = [...this.pages, {
@@ -79,5 +96,16 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     `;
   }
 }
+
+function adjustScreenHeight() {
+  const screens = document.querySelectorAll('portfolio-screen');
+  screens.forEach((screen) => {
+    screen.style.minHeight = `${window.innerHeight}px`; // Set height to viewport height
+  });
+}
+
+// Adjust on page load and window resize
+window.addEventListener('DOMContentLoaded', adjustScreenHeight);
+window.addEventListener('resize', adjustScreenHeight);
 
 globalThis.customElements.define(PortfolioVeryTheme.tag, PortfolioVeryTheme);

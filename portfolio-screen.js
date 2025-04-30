@@ -70,6 +70,17 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
      font-weight: var(--ddd-font-weight-regular);   
      margin-top: var(--ddd-spacing-27);
     }
+
+    @media screen and (max-width: 900px){
+      .core{
+        flex-direction: column;
+        margin-top: var(--ddd-spacing-30);
+      }
+      .title{
+        font-size: var(--ddd-font-size-3xl);
+        margin-bottom: var(--ddd-spacing-10);
+      }
+    }
      
    
     `];

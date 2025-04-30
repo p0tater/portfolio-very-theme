@@ -49,6 +49,15 @@ export class navBar extends DDDSuper(I18NMixin(LitElement)) {
       margin-top: var(--ddd-spacing-1);
 
     }
+
+    @media screen and (max-width: 1100px){
+      hax-logo{
+        display: none;
+      }
+      header{
+        height: 100%;
+      }
+    }
    
     `];
   }
