@@ -53,6 +53,11 @@
     hax-logo{
       position: absolute;
     }
+
+  portfolio-very-theme, portfolio-screen {
+  width: 100%; /* Ensure the components fit the viewport width */
+  box-sizing: border-box; /* Include padding and borders in width calculations */
+  }
     
 
     @media screen and (max-width: 1100px){
@@ -62,6 +67,7 @@
     portfolio-very-theme{
       width: 100%;
       display: flex;
+      zoom: normal;
     }
     portfolio-screen[title="About Me"] span[slot="img"] {
      align-self: center;
