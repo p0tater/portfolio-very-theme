@@ -18,10 +18,15 @@
       justify-content: space-evenly;
     }
 
+    ul {
+      font-family: var(--ddd-font-secondary) !important;
+    }
+
     span h2{
       margin: var(--ddd-spacing-0) var(--ddd-spacing-0) var(--ddd-spacing-8) var(--ddd-spacing-0); 
       font-size: var(--ddd-font-size-l);
       font-weight: var(--ddd-font-weight-medium);
+      font-family: var(--ddd-font-secondary);
     }
 
 
@@ -49,15 +54,12 @@
       font-size: var(--ddd-font-size-4xl);
       font-weight: var(--ddd-font-weight-black);
       margin-left: var(--ddd-spacing-20);
+      font-family: var(--ddd-font-secondary);
     }
     hax-logo{
       position: absolute;
     }
 
-  portfolio-very-theme, portfolio-screen {
-  width: 100%; /* Ensure the components fit the viewport width */
-  box-sizing: border-box; /* Include padding and borders in width calculations */
-  }
     
 
     @media screen and (max-width: 1100px){
@@ -67,7 +69,6 @@
     portfolio-very-theme{
       width: 100%;
       display: flex;
-      zoom: normal;
     }
     portfolio-screen[title="About Me"] span[slot="img"] {
      align-self: center;

@@ -58,6 +58,7 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
         justify-content: space-evenly;
         //margin: var(--ddd-spacing-25)  var(--ddd-spacing-30) 0  var(--ddd-spacing-30);
         margin-top: var(--ddd-spacing-20);
+        font-family: var(--ddd-font-secondary);
      }
 
      :host(:nth-of-type(even)) .core {
@@ -66,7 +67,7 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
     .title{
      align-self: flex-end;
      font-size: var(--ddd-font-size-xl);
-     font-family: var(--ddd-font-navigation);
+     font-family: var(--ddd-font-secondary);
      font-weight: var(--ddd-font-weight-regular);   
      margin-top: var(--ddd-spacing-27);
     }
