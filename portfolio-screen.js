@@ -75,7 +75,6 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
     @media screen and (max-width: 900px){
       .core{
         flex-direction: column;
-        margin-top: var(--ddd-spacing-30);
       }
       .title{
         font-size: var(--ddd-font-size-3xl);
