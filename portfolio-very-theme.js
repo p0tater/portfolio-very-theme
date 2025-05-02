@@ -71,6 +71,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     `;
   }
 
+
   firstUpdated(changedProperties) {
     this.querySelectorAll('portfolio-screen').forEach((screen, index) => {
       this.pages = [...this.pages, {
@@ -96,5 +97,15 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     `;
   }
 }
+function adjustScreenHeight() {
+  const screens = document.querySelectorAll('portfolio-screen');
+  screens.forEach((screen) => {
+    screen.style.minHeight = `${window.innerHeight}px`; // Set height to viewport height
+  });
+}
+
+// Adjust on page load and window resize
+window.addEventListener('DOMContentLoaded', adjustScreenHeight);
+window.addEventListener('resize', adjustScreenHeight);
 
 globalThis.customElements.define(PortfolioVeryTheme.tag, PortfolioVeryTheme);
