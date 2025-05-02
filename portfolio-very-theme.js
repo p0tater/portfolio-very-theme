@@ -106,6 +106,5 @@ function adjustScreenHeight() {
 
 // Adjust on page load and window resize
 window.addEventListener('DOMContentLoaded', adjustScreenHeight);
-window.addEventListener('resize', adjustScreenHeight);
 
 globalThis.customElements.define(PortfolioVeryTheme.tag, PortfolioVeryTheme);
