@@ -62,9 +62,9 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       }
     }
 
-    @media screen and (max-width: 550px){
+    @media screen and (max-width: 700px){
       nav-bar{
-        top: 25vh;
+        top: 35vh;
         height: 10vh;
       }
     }
@@ -106,5 +106,6 @@ function adjustScreenHeight() {
 
 // Adjust on page load and window resize
 window.addEventListener('DOMContentLoaded', adjustScreenHeight);
+window.addEventListener('resize', adjustScreenHeight);
 
 globalThis.customElements.define(PortfolioVeryTheme.tag, PortfolioVeryTheme);

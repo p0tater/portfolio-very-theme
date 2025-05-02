@@ -79,6 +79,21 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
       .title{
         font-size: var(--ddd-font-size-3xl);
         margin-bottom: var(--ddd-spacing-10);
+        margin-top: var(--ddd-spacing-30);
+      }
+    }
+
+    @media screen and (max-width: 700px){
+      .screen{
+        justify-content: space-between;
+        min-height: inherit;
+      }
+      .title{
+        align-self: center;
+      }
+      .core{
+        padding-bottom: var(--ddd-spacing-30);
+        margin-bottom: var(--ddd-spacing-30);
       }
     }
      
