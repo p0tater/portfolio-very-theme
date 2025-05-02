@@ -23,7 +23,7 @@
     }
 
     span h2{
-      margin: var(--ddd-spacing-0) var(--ddd-spacing-0) var(--ddd-spacing-8) var(--ddd-spacing-0); 
+      margin: var(--ddd-spacing-0) var(--ddd-spacing-0) var(--ddd-spacing-4) var(--ddd-spacing-0); 
       font-size: var(--ddd-font-size-l);
       font-weight: var(--ddd-font-weight-medium);
       font-family: var(--ddd-font-secondary);
@@ -83,7 +83,7 @@
     }
 
     
-    @media screen and (max-width: 450px){
+    @media screen and (max-width: 550px){
       portfolio-screen[title="About Me"] span[slot="content"] {
         font-size: var(--ddd-font-size-l);
       }
@@ -148,8 +148,8 @@
         <span slot="content">
           <h2>Skills</h2>
           <ul>
-            <li>Proficient in HTML, CSS, JavaScript, SQL, Java</li>
-            <li>Experience with Wireshark, Snort, Autopsy, Kali Linux, Cisco Packet Tracer</li>
+            <li>Experience in HTML, CSS, JavaScript, SQL, Java</li>
+            <li>Familiarity with Wireshark, Snort, Autopsy, Kali Linux, Cisco Packet Tracer</li>
             <li>Strong understanding of cybersecurity principles and practices</li>
             <li>Excellent problem-solving and analytical skills</li>
             <li>Strong communication and teamwork abilities</li>
@@ -166,6 +166,7 @@
           <li>Network Security</li>
           <li>Encryption</li>
           <li>Ethical Hacking</li>
+          <li>Cyber Crime & Warfare</li>
         </ul>
       </span>
     </portfolio-screen>
@@ -173,17 +174,17 @@
       <span slot="content">
         <h2>Inferno Pizzeria Napoletana</h2>
         <ul>
-          <li>Answered and satisfied phone-in/to-go orders.</li>
-          <li>Cleared tables, provided orders whilst hosting customers.</li>
-          <li>Worked 6 hours a week during the school year and 12 hours during the summer.</li>
-          <li> Assisted in opening and closing, completing tasks provided by lead chef.</li>
+          <li>Answered and satisfied phone-in/to-go orders</li>
+          <li>Cleared tables, provided orders whilst hosting customers</li>
+          <li>Worked 6 hours a week during the school year and 12 hours during the summer</li>
+          <li> Assisted in opening and closing, completing tasks provided by lead chef</li>
         </ul>
-        <h1>Trader Joes</h1>
+        <h2>Trader Joes</h2>
         <ul>
-          <li>Worked 22-hour weeks on top of my 6 hour a week job at Inferno during high school year and summer.</li>
-          <li>Created close relationships with managers and co-workers, plan on going working during the summer this year.</li>
-          <li>Worked collaboratively with co-workers, breaking down truck loads and stocking shelves.</li>
-          <li>Developed and honed workplace social skills, especially during my work on register.</li>
+          <li>Worked 22-hour weeks on top of my 6 hour a week job at Inferno during high school year and summer</li>
+          <li>Created close relationships with managers and co-workers, plan on going working during the summer this year</li>
+          <li>Worked collaboratively with co-workers, breaking down truck loads and stocking shelves</li>
+          <li>Developed and honed workplace social skills, especially during my work on register</li>
         </ul>
       </span>
       <span slot="img">
@@ -202,7 +203,7 @@
   <script type="module" src="./portfolio-screen.js"></script>
   <script type="module" src="./nav-bar.js"></script>
   <script type="module">
-    addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
       const currScreen = window.location.href.split("#")[1] || "screen-0";
       document.getElementById(currScreen).scrollIntoView({ behavior: "smooth"
       });
